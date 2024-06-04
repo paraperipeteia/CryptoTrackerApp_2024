@@ -4,7 +4,6 @@ const downArrow = "sprites/downArrow.png";
 const inRangeIcon = "sprites/inRange.png";
 const fallBackSprite = "sprites/inRange.png";
 
-
 var timeoutId = null;
 var activeTimeout = false;
 var textFile = null; 
@@ -51,7 +50,6 @@ var cyclingHeader =
 
 var localData = { "coins" : [] };
 
-const coinIds = ["bitcoin","siacoin","ripple","velo","algorand","cardano","stellar"];
 const currencyStr = "usd";
 
 var displayStr = "";
@@ -253,7 +251,7 @@ function BuildExportButton()
 
 function BuildImportButton()
 {
-    var importButtonInjection = `<div class="file-input custom"><span>Select Import File</span><input type="file" id="my_file" placeholder="TEST"></div>`;/*</div>`;*/
+    var importButtonInjection = `<div class="file-input custom"><span>Select Import File</span><input type="file" id="my_file" placeholder="TEST"></div>`;
     document.getElementById("importingParent").innerHTML += importButtonInjection;
 
     document.getElementById('importHeader').onclick = function() 
@@ -340,7 +338,6 @@ function BuildForm(targetParent)
                     }
                 });
             AddCoin(newCoinId, owned, low, high, newCoinName, path);
-
             PrintErrorMsgOnHeader("tknHeader", "Adding Token...", "Hide Token Form");            
             Refresh();
         });
@@ -359,7 +356,6 @@ function ExpandElement(id, msgElementId, msg)
     element.style.display = "inline-block";
     document.getElementById(msgElementId).innerHTML = `${msg}`;
 }
-
 
 function CollapseForm()
 {
@@ -431,7 +427,6 @@ function PrintErrorMsgOnHeader(elementId, msg, revertMsg)
 
 function IsDataValid(data)
 {
-
     if (data.coins == null)
     {
         console.log("Data is null");
@@ -457,9 +452,13 @@ function IsDataValid(data)
 
 function SetupAbout()
 {
-    var aboutText = `This web application fetches cryptocurrency data from the CoinGecko API every 15 seconds. The data is displayed in an easiy readable format and can be exported and imported. The application is built using HTML, CSS, and JavaScript. The data is stored in a local JSON object and can be exported and imported`;
+    var aboutText = `This web application fetches cryptocurrency data from the CoinGecko API every 15 seconds.`; 
+    aboutText += `The data is displayed in an easiy readable format and can be exported and imported. The application is built using HTML, CSS, and JavaScript.`; 
+    aboutText += `The data is stored in a local JSON object and can be exported and imported`;
 
-    var aboutCoinGecko = `The CoinGecko API is a free API that provides cryptocurrency data. The API is easy to use and provides a wide range of data. Please refer to CoinGecko documentation for more information on how to setup your own custom coin list using correct coin ids.`;
+    var aboutCoinGecko = `The CoinGecko API is a free API that provides cryptocurrency data.`; 
+    aboutCoinGecko += `The API is easy to use and provides a wide range of data.`; 
+    aboutCoinGecko += `Please refer to CoinGecko documentation for more information on how to setup your own custom coin list using correct coin ids.`;
 
     var coinGeckoLink = `<a href="https://docs.coingecko.com/reference/coins-list" target="_blank">CoinGecko Coins List API Documentation</a>`;
 
@@ -488,7 +487,8 @@ function SetupAbout()
 function typeWriter(txt, targ, position) 
 {
     var speed = 60;
-    // safety to make sure we don't end up with a bunch of weird junk - bug fix 
+
+    // safety to make sure we don't end up with a bunch of weird junk - haven't verified this works... yet
     targ.innerHTML = `${txt.substring(0, position)}`;
     if (position < txt.length) 
     {
@@ -507,6 +507,7 @@ function AnimatedText(text, target)
     typeWriter(text, target, 0); 
 }
 
+// Might use this later...
 function FlashAllText()
 {
     var text = document.getElementById("animatedText");
