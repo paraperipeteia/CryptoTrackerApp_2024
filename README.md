@@ -63,4 +63,5 @@ You need the token id, NOT SYMBOL, to add a coin to your custom list. You can ch
 - Better coin support for ease of use 
 - mobile support? (currently not optimized for mobile viewing in any way)
 
-
+## Known Issues
+- There's an intermittent issue with the `TypeWriter` function on quotations. Working theory: a problem with an accumulation of `setTimeout` calls overwriting each other (maybe?) but I haven't found a remedy. It tends to correct itself after a few seconds. 
