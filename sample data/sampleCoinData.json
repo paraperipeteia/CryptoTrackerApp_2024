@@ -1,0 +1,20 @@
+{"coins" : [
+	{
+		"id": "bitcoin",
+		"amountOwned": "0.01",
+		"alertThresholdLower": "50000",
+		"alertThresholdHigher": "70000",
+		"currentPrice": 69250,
+		"name": "Bitcoin",
+		"icon": "sprites/btc.png"
+	},
+	{
+		"id": "ripple",
+		"amountOwned": "50",
+		"alertThresholdLower": "0.4",
+		"alertThresholdHigher": "0.75",
+		"currentPrice": 0.520419,
+		"name": "XRP",
+		"icon": "sprites/xrp.png"
+	}
+]}

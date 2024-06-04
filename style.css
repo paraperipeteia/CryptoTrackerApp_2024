@@ -1,0 +1,445 @@
+@import url(`node_modules/animate.css/ animate.min.css`);
+
+.main
+{
+    width: 1024px;
+    display: inline-block;
+    align-items: center;
+    border-spacing: 5px;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.button,.file-input-custom
+{
+    display: inline-block; 
+    background: rgba(209, 204, 52, 1);
+    background-color: rgba(209, 204, 52, 1);
+    -webkit-text-fill-color: black;
+    font: 1.0vw "Helvetica", sans-serif;
+    padding: 10px; 
+    border-radius: 20px;
+    width: 20vw;
+    max-width: 100%; 
+    max-height: 70%;
+    padding: 8px 8px 8px 8px;
+    margin: 8px 8px 8px 8px;
+    align-self: start; 
+}
+
+.button:hover, .file-input-custom:hover, .file-input:hover, .file-input > *:hover
+{
+    background-color: rgba(209, 204, 52, 0.8);
+    animation: pulse; /* referring directly to the animation's @keyframe declaration */
+    animation-duration: 0.5s; /* don't forget to set a duration! */
+    animation-iteration-count: 1;
+    animation-direction: forward;
+    animation-timing-function: ease;
+    animation-fill-mode: both;
+    animation-play-state: running;
+    animation-delay: 0s;
+    animation-name: pulse;
+}
+
+img
+{
+    display: inline-block;
+    position: relative;
+    top: 4px;
+    border-radius: 50%;
+    max-width: 7%;
+    max-height: 7%
+    background-color : rgba(0, 0, 0, 0); 
+}
+
+body
+{
+    background-color : rgba(0, 0, 0, 0.8);  
+    text-align: center;
+    overflow-x: hidden;
+}
+
+#formLabel
+{
+    display: inline-block;
+    width: 35%; 
+    padding: 12px;
+    border-radius: 20px;
+    border-spacing: 18px; 
+    text-align: center;
+    font-family: , sans-serif;
+    font: 1.25vw "Helvetica", sans-serif;
+    -webkit-text-fill-color: white;
+    margin-block: 4px 1px;
+    margin-inline: 5%;
+    writing-mode: horizontal-tb;
+}
+
+#headerSpanner
+{
+    display: inline-block;
+    width: 100%;
+    height: 3vh;
+}
+
+.header
+{
+    font-family: Arial, sans-serif;
+    font: 1.5vw "Helvetica", sans-serif;
+    height: 38px;
+    text-align: center;
+    align-content: center;
+    align-items: center;
+    -webkit-text-fill-color : white;
+    background-color: rgba(0, 120, 200, 0.4);
+    font-variation-settings: 'wght' 60;
+    padding: 5px;
+    margin-block: 16px 0px;
+}
+
+#exportHeader
+{
+    display: inline-block;
+    width: 25vw;
+    height: 3.25vh;
+    border-radius: 20px;
+    font-family: Arial, sans-serif;
+    font: 1.5vw "Helvetica", sans-serif;
+    text-align: center;
+    -webkit-text-fill-color : white;
+    background-color: rgba(0, 120, 200, 0.4);
+    font-variation-settings: 'wght' 60;
+    padding: 2.5px 2.5px 2.5px 2.5px;
+    align-items: center;
+    align-self: center;
+    align-content: center;
+}
+
+#aboutRoot
+{
+    display: inline-block;
+    width: 33.3%;
+    height: 100%;
+    font-family: Arial, sans-serif;
+    font: 1vw "Helvetica", sans-serif;
+    text-align: center;
+    -webkit-text-fill-color : white;
+    align-items: start;
+    align-self: start;
+    align-content: start; 
+}
+
+#tknHeader, #importHeader, #aboutHeader
+{
+    display: inline-block;
+    width: 32.5vw;
+    height: 3.5vh;
+    font-family: Arial, sans-serif;
+    border-radius: 20px;
+    font: 1.5vw "Helvetica", sans-serif;
+    text-align: center;
+    -webkit-text-fill-color : white;
+    background-color: rgba(0, 120, 200, 0.4);
+    font-variation-settings: 'wght' 60;
+    padding: 0px 0px;
+    margin-block: 0px 0vw 0vw 0px;
+    align-items: center;
+    align-self: center;
+    align-content: center;
+} 
+
+.header:hover, #tknHeader:hover, #importHeader:hover, #exportHeader:hover, #aboutHeader:hover
+{
+    background-color: rgba(0, 120, 200, 0.6);
+    animation: pulse; 
+    animation-duration: 0.5s; 
+    animation-iteration-count: 1;
+    animation-direction: alternate;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: both;
+    animation-play-state: running;
+    animation-delay: 0s;
+    animation-name: pulse;
+}
+
+.widget {
+    display: inline-block;
+    width: 20vw; 
+    top: 20px;
+    /*background-color: rgba(11, 85, 128, 1);*/
+    background-color: rgba(0, 0, 0, 0.25);
+    padding: 8px;
+    border-radius: 15px;
+    border-spacing: 15px; 
+    text-align: center;
+    font-family: Arial, sans-serif;
+    font: 1.0vw "Helvetica", sans-serif;
+    -webkit-text-fill-color: white;
+    margin-block: 4px 1px;
+    margin-inline: 2%;
+    writing-mode: horizontal-tb;
+    animation: pulse; /* referring directly to the animation's @keyframe declaration */
+    animation-duration: 0.8s; /* don't forget to set a duration! */
+}
+
+.alertWidget {
+    display: inline-block;
+    width: 20vw;
+    top: 20px;
+    -webkit-text-fill-color: rgba(0, 0, 0, 1);
+    background-color: rgba(209, 204, 52, 0.75);
+    padding: 8px;
+    border-radius: 15px;
+    border-spacing: 15px; 
+    text-align: center;
+    font-family: Arial, sans-serif;
+    font: 1.0vw "Helvetica", sans-serif;
+    margin-block: 4px 1px;
+    margin-inline: 2%;
+    writing-mode: horizontal-tb;
+    animation: pulse;
+    animation-duration: 0.8s;
+}
+
+.importBtn{
+    display: inline-block;
+    background-color: rgba(0, 0, 0, 0.25);
+    padding: 16px;
+    border-radius: 25px;
+    border-spacing: 15px; 
+    height: 3vh;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    font: 1.25rem "Helvetica", sans-serif;
+    -webkit-text-fill-color: white;
+    margin-block: 4px 1px;
+    margin-inline: 16%;
+    writing-mode: horizontal-tb;
+}
+
+.importParent
+{
+    display: inline-block;
+    background-color: rgba(200, 200, 0, 0.25);
+    padding: 8px;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    font: 1.25rem "Helvetica", sans-serif;
+    -webkit-text-fill-color: white;
+    margin-block: 4px 1px;
+    margin-inline: 8%;
+    writing-mode: horizontal-tb;
+}
+
+.importBtn:hover
+{
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.exportBtn:hover
+{
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+#formLabel:hover
+{
+    size: 0.8vw;
+    background-color: rgba(0, 120, 200, 0.4);
+}
+
+.widget:hover
+{
+    background-color: rgba(0, 120, 200, 0.4);
+    animation: pulse; /* referring directly to the animation's @keyframe declaration */
+    animation-duration: 0.5s;
+} 
+
+.file-input.custom{
+    background: rgba(209, 204, 52, 1);
+    width: 25vw;
+    height: 3vh;
+    border-radius: 20px;
+    font-family: Arial, sans-serif;
+    font: 1.25vw "Helvetica", sans-serif;
+    text-align: center;
+    text-valign: center;
+    text-align-last: center;
+    align-items: center;
+    align-self: center;
+    align-content: center;
+    padding: 4px;
+    margin-block: 16px 1px;
+}
+
+.file-input-custom:hover
+{
+    background-color: rgba(209, 204, 52, 0.8);
+    animation: pulse; /* referring directly to the animation's @keyframe declaration */
+    animation-duration: 0.5s; /* don't forget to set a duration! */
+    animation-iteration-count: 1;
+    animation-direction: alternate;
+    animation-timing-function: ease-in;
+    animation-fill-mode: both;
+    animation-play-state: running;
+    animation-delay: 0s;
+    animation-name: pulse;
+}
+
+.file-input:hover
+{
+    background-color: rgba(209, 204, 52, 0.8);
+    animation: pulse; /* referring directly to the animation's @keyframe declaration */
+    animation-duration: 0.5s; /* don't forget to set a duration! */
+    animation-iteration-count: 1;
+    animation-direction: alternate;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: both;
+    animation-play-state: running;
+    animation-delay: 0s;
+    animation-name: pulse;
+}
+
+.file-input{
+    pointer-events: none;
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+    text-align: center;
+    width: 25vw;
+    align-items: center;
+    align-self: center;
+    align-content: center;
+    padding: 4px;
+}
+.file-input > * {
+    pointer-events: none;
+}
+.file-input > input[type="file"]{
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    opacity: 0;
+    pointer-events: all;
+    cursor: pointer;
+    width: 25vw;
+    height: 10vw;
+    align-items: center;
+    align-self: center;
+    align-content: center;
+    padding: 4px;
+}
+
+.alertWidget:link
+{
+    background-color: rgba(209, 204, 52, 1);
+}
+
+.typeIcon:hover
+{
+    background-color: rgba(0, 0, 0, 0.5);
+
+}
+
+.typeIcon:active
+{
+    background-color: rgba(0, 0, 0, 0.75);
+}
+
+.typeicon:visited
+{
+    background-color: rgba(0, 0, 0, 0.75);
+}
+
+form input
+{
+    display: inline-block;
+    background-color: rgba(209, 204, 52, 0.75);
+    padding: 8px;
+    border-radius: 20px;
+    border-spacing: 15px; 
+    text-align: center;
+    font-family: Arial, sans-serif;
+    font: 1.25vw "Helvetica", sans-serif;
+    margin-block: 4px 1px;
+    margin-inline: 8%;
+    writing-mode: horizontal-tb;
+    width: 20vw;
+}
+
+form input:active
+{
+    background-color: rgba(0, 0, 0, 0.25);
+    -webkit-text-fill-color: black;
+}
+
+form input:focus
+{
+    background-color: rgba(0, 0, 0, 0.25);
+}
+
+form input:hover
+{
+    background-color: rgba(0, 0, 0, 0.25);
+    -webkit-text-fill-color: black;
+}
+
+form input:visited
+{
+    background-color: rgba(0, 0, 0, 0.25);
+    -webkit-text-fill-color: black;
+}
+
+form input:diabled
+{
+    background-color: rgba(0, 0, 0, 0.25);
+    -webkit-text-fill-color: black;
+}
+
+#dataParentRoot
+{
+    display: flex;
+    width: 100%;
+}
+
+#token-data
+{
+    width: 33.3%;
+}
+
+#formParent 
+{
+    display: inline-block;
+    width: 100%;
+}
+
+#exportingParent{
+    display: block;
+    font-family: Arial, sans-serif;
+    font: 1.5vw "Helvetica", sans-serif;
+    text-align: center;
+    -webkit-text-fill-color : white;
+    padding: 8px 8px 8px 8px;
+    width: 33%;
+}
+
+#aboutParent
+{
+    display: inline-block;
+    position: relative;
+    font-family: Arial, sans-serif;
+    font: 1.5vw "Helvetica", sans-serif;
+    text-align: center;
+    -webkit-text-fill-color : white;
+    padding: 50px 0px 0px 0px;
+    width: 95%; 
+    height: 95%;
+    align-content: start;
+}
+
+#importingParent
+{
+    display: inline-block;
+    width: 33.3%;
+}
+
